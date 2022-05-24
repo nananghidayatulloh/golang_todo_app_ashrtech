@@ -1,0 +1,25 @@
+version: '1'
+services:
+  go:
+    image: golang:1.18
+    container_name: gotodoashrtech
+    volumes:
+      - .:/golang_todo_app_ashrtech
+    working_dir: /golang_todo_app_ashrtech
+    command: ./build.sh
+    links:
+      - postgres
+    ports:
+      - 8080:8080
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: todoashrdb
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: secret
+    ports:
+      - 5432:5432
+    volumes:
+      - ./db:/postgres

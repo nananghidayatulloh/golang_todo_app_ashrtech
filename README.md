@@ -15,7 +15,7 @@ todo app with golang and postgres docker
 - `docker-compose up`
 - Ensure gotodoashrtech and posgres docker container is running
 - Open your favorite REST API Client such as [POSTMAN](https://www.postman.com/downloads/)
-- Import POSTMAN Collection into your POSTMAN App.
+- Import POSTMAN Collection: asht_tech_api_collection into your POSTMAN App.
 
 #### POSTMAN USING
 
